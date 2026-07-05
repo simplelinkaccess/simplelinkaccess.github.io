@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What Is a VLESS Subscription? | SimpleLinkAccess</title>
+    <meta name="description" content="A beginner-friendly explanation of VLESS subscriptions, subscription links, Hiddify profiles and how SimpleLinkAccess delivers configurations.">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark">S</span><span>SimpleLinkAccess</span></a><nav class="top-nav" aria-label="Main navigation"><a href="getting-started.html">Getting Started</a><a href="hiddify-essentials-part-1.html">Hiddify</a><a href="buy-vless-subscription.html">Buy VLESS</a><a href="faq.html">FAQ</a><a href="troubleshooting.html">Troubleshooting</a></nav></div></header>
+    <main class="page doc-layout">
+      <aside class="sidebar"><p class="sidebar-title">Knowledge Base</p><a href="what-is-vless-subscription.html" aria-current="page">What is VLESS?</a><a href="is-hiddify-a-vpn.html">Is Hiddify a VPN?</a><a href="hiddify-vpn-vs-system-proxy.html">VPN vs System Proxy</a><a href="hiddify-not-connecting.html">Hiddify not connecting</a><a href="hiddify-refresh-subscription.html">Refresh subscription</a><p class="sidebar-title">Guides</p><a href="getting-started.html">Getting Started</a><a href="import-vless-link.html">Import VLESS</a><a href="faq.html">FAQ</a></aside>
+      <article class="article">
+        <header class="article-header"><div class="eyebrow">Knowledge Base</div><h1>What is a VLESS subscription?</h1><p class="lead">A VLESS subscription is a link that gives a compatible client, such as Hiddify, the connection configurations it needs.</p></header>
+        <p>Many people first meet VLESS through a QR code or a long subscription URL. That can look technical, but the idea is simple: Hiddify is the application on your device, and the VLESS subscription is the configuration source Hiddify reads from.</p>
+        <p>The subscription can include server addresses, protocol settings, security parameters, display names and routing information. You normally do not edit those details by hand. You import the subscription once, then the client uses it to create a profile you can connect with.</p>
+        <h2>Client, protocol and subscription</h2>
+        <p>It helps to separate three concepts. The client is the app you install. Hiddify is a client. The protocol is the technology used for the connection. VLESS is one of those protocols. The subscription is the delivery format that lets the client receive one or more usable configurations.</p>
+        <p>This separation is useful because your subscription is not tied to one proprietary app. If a client supports VLESS subscriptions, it can usually use the same link.</p>
+        <h2>Why subscriptions are easier than manual setup</h2>
+        <p>Manual configuration asks users to copy many separate values: address, port, UUID, security mode, transport, hostnames and other protocol details. A subscription link packages that information so the client can import it automatically.</p>
+        <p>That also makes updates easier. If a provider changes servers or adjusts configuration, you can refresh the subscription in Hiddify instead of deleting everything and starting again.</p>
+        <h2>How SimpleLinkAccess uses subscriptions</h2>
+        <p>SimpleLinkAccess creates your VLESS subscription automatically after payment with Telegram Stars. You receive the subscription in the bot and can import it with a QR code or by copying the link.</p>
+        <p>Once imported, Hiddify stores the profile locally. Renewing the subscription does not usually require importing it again. You keep the same link and refresh it if Hiddify needs to download the latest configuration.</p>
+        <div class="callout"><strong>Short version:</strong> Hiddify is the app. VLESS is the connection technology. Your subscription link tells Hiddify how to connect.</div>
+        <nav class="pager" aria-label="Article navigation"><a href="index.html">Back to home</a><a href="is-hiddify-a-vpn.html">Next: Is Hiddify a VPN?</a></nav>
+      </article>
+    </main>
+    <footer class="site-footer"><div class="footer-inner">SimpleLinkAccess documentation.</div></footer>
+  </body>
+</html>

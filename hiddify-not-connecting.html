@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hiddify Not Connecting | SimpleLinkAccess</title>
+    <meta name="description" content="A focused troubleshooting guide for Hiddify connection problems, timeouts, expired subscriptions, VPN mode and refresh issues.">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark">S</span><span>SimpleLinkAccess</span></a><nav class="top-nav" aria-label="Main navigation"><a href="getting-started.html">Getting Started</a><a href="hiddify-essentials-part-1.html">Hiddify</a><a href="buy-vless-subscription.html">Buy VLESS</a><a href="faq.html">FAQ</a><a href="troubleshooting.html">Troubleshooting</a></nav></div></header>
+    <main class="page doc-layout">
+      <aside class="sidebar"><p class="sidebar-title">Knowledge Base</p><a href="what-is-vless-subscription.html">What is VLESS?</a><a href="is-hiddify-a-vpn.html">Is Hiddify a VPN?</a><a href="hiddify-vpn-vs-system-proxy.html">VPN vs System Proxy</a><a href="hiddify-not-connecting.html" aria-current="page">Hiddify not connecting</a><a href="hiddify-refresh-subscription.html">Refresh subscription</a></aside>
+      <article class="article">
+        <header class="article-header"><div class="eyebrow">Troubleshooting</div><h1>Hiddify not connecting</h1><p class="lead">Start with the simple checks first. Most Hiddify connection problems are caused by mode, subscription status or a stale configuration.</p></header>
+        <h2>1. Check whether the subscription is active</h2>
+        <p>If your subscription expired, Hiddify may still show the imported profile, but the connection will not work. Open <a href="https://t.me/simplelinkaccessbot">@simplelinkaccessbot</a>, go to <strong>My Configs</strong> and check the expiration date.</p>
+        <p>If it expired, press <strong>Extend</strong>. You normally do not need to import the link again after renewal.</p>
+        <h2>2. Refresh the subscription</h2>
+        <p>After renewal or provider-side updates, press Refresh in Hiddify. This asks Hiddify to download the latest version of your subscription link. A refresh is faster and cleaner than deleting the profile and importing it again.</p>
+        <h2>3. Use VPN mode</h2>
+        <p>If you are not sure which connection mode is selected, switch to VPN mode. Proxy and System Proxy modes can be valid, but some applications ignore them. VPN mode is the best test because it routes traffic more broadly.</p>
+        <h2>4. Restart Hiddify after a timeout</h2>
+        <p>On a first connection attempt, Hiddify can occasionally take longer while establishing the connection. Press Connect again. If it remains on a timeout screen, close Hiddify completely, open it and connect again.</p>
+        <h2>5. Test your base internet connection</h2>
+        <p>Disconnect Hiddify and check whether normal websites open. If the base connection is slow, unstable or captive-portal blocked, Hiddify cannot fix that network layer by itself.</p>
+        <h2>6. Check per-app routing</h2>
+        <p>On Android, Per-app Proxy can route some apps through Hiddify and others directly. If only one app fails, check whether it is included in the Hiddify route. Temporarily disable Per-app Proxy to test.</p>
+        <div class="callout"><strong>Fastest recovery path:</strong> renew if needed, refresh the subscription, switch to VPN mode, restart Hiddify and connect again.</div>
+        <nav class="pager" aria-label="Article navigation"><a href="hiddify-vpn-vs-system-proxy.html">Previous: VPN vs System Proxy</a><a href="hiddify-refresh-subscription.html">Next: Refresh subscription</a></nav>
+      </article>
+    </main>
+    <footer class="site-footer"><div class="footer-inner">SimpleLinkAccess documentation.</div></footer>
+  </body>
+</html>

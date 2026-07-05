@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hiddify VPN Mode vs System Proxy | SimpleLinkAccess</title>
+    <meta name="description" content="Compare Hiddify VPN mode, System Proxy and Proxy mode, with recommendations for Android, iPhone, Windows, macOS and Linux.">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark">S</span><span>SimpleLinkAccess</span></a><nav class="top-nav" aria-label="Main navigation"><a href="getting-started.html">Getting Started</a><a href="hiddify-essentials-part-1.html">Hiddify</a><a href="buy-vless-subscription.html">Buy VLESS</a><a href="faq.html">FAQ</a><a href="troubleshooting.html">Troubleshooting</a></nav></div></header>
+    <main class="page doc-layout">
+      <aside class="sidebar"><p class="sidebar-title">Knowledge Base</p><a href="what-is-vless-subscription.html">What is VLESS?</a><a href="is-hiddify-a-vpn.html">Is Hiddify a VPN?</a><a href="hiddify-vpn-vs-system-proxy.html" aria-current="page">VPN vs System Proxy</a><a href="hiddify-not-connecting.html">Hiddify not connecting</a><a href="hiddify-refresh-subscription.html">Refresh subscription</a></aside>
+      <article class="article">
+        <header class="article-header"><div class="eyebrow">Knowledge Base</div><h1>Hiddify VPN mode vs System Proxy</h1><p class="lead">Connection mode decides which apps use Hiddify and how much traffic is routed through it.</p></header>
+        <p>The most common Hiddify setup question is whether to choose VPN mode or System Proxy. Both can work, but they solve different problems. The right choice depends on your operating system and whether you want all apps or only proxy-aware apps to use Hiddify.</p>
+        <h2>VPN mode</h2>
+        <p>VPN mode is the best default for most users. It uses the operating system VPN interface and can route traffic from apps that do not know anything about proxies. On mobile devices, this is usually the most reliable option because many apps ignore manual proxy settings.</p>
+        <p>Use VPN mode on Android and iPhone unless you have a specific reason not to. On desktop, VPN mode is also useful when you want broader routing and fewer surprises.</p>
+        <h2>System Proxy</h2>
+        <p>System Proxy tells the operating system to use Hiddify as a proxy. Browsers and many desktop applications follow this setting automatically. Some applications ignore it, especially apps that use their own networking stack or have custom proxy behavior.</p>
+        <p>System Proxy can be comfortable on Windows, macOS and Linux when you mostly need browser access, Telegram or other proxy-aware tools. It is also useful if VPN mode is unavailable or conflicts with another network tool.</p>
+        <h2>Proxy mode</h2>
+        <p>Proxy mode is for advanced users. Hiddify runs a local proxy, but applications must be configured to use it. Most beginners should not start here because many apps will simply bypass it.</p>
+        <h2>Recommended choices</h2>
+        <ul><li>Android: VPN mode</li><li>iPhone and iPad: VPN mode</li><li>Windows: VPN mode or System Proxy</li><li>macOS: VPN mode or System Proxy</li><li>Linux: VPN mode or System Proxy</li></ul>
+        <div class="callout"><strong>If something does not work,</strong> switch to VPN mode first. It removes many app-level proxy issues from the equation.</div>
+        <nav class="pager" aria-label="Article navigation"><a href="is-hiddify-a-vpn.html">Previous: Is Hiddify a VPN?</a><a href="hiddify-not-connecting.html">Next: Hiddify not connecting</a></nav>
+      </article>
+    </main>
+    <footer class="site-footer"><div class="footer-inner">SimpleLinkAccess documentation.</div></footer>
+  </body>
+</html>
