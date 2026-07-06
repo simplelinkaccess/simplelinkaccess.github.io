@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What Happens When You Press Connect? | SimpleLinkAccess</title>
+    <meta name="description" content="Learn what happens when you press Connect in Hiddify: encrypted tunnel, subscription server, provider visibility, and how your traffic reaches the internet.">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark">S</span><span>SimpleLinkAccess</span></a><nav class="top-nav" aria-label="Main navigation"><a href="getting-started.html">Getting Started</a><a href="hiddify-essentials-part-1.html">Hiddify</a><a href="buy-vless-subscription.html">Buy VLESS</a><a href="faq.html">FAQ</a><a href="troubleshooting.html">Troubleshooting</a></nav></div></header>
+    <main class="page doc-layout">
+      <aside class="sidebar"><p class="sidebar-title">Knowledge Base</p><a href="what-happens-when-you-press-connect.html" aria-current="page">Press Connect</a><a href="what-is-vless-subscription.html">What is VLESS?</a><a href="is-hiddify-a-vpn.html">Is Hiddify a VPN?</a><a href="hiddify-vpn-vs-system-proxy.html">Connection modes</a><a href="hiddify-not-connecting.html">Hiddify not connecting</a><a href="hiddify-refresh-subscription.html">Refresh subscription</a><p class="sidebar-title">Guides</p><a href="getting-started.html">Getting Started</a><a href="import-vless-link.html">Import VLESS</a><a href="faq.html">FAQ</a></aside>
+      <article class="article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>Knowledge</span><span>What Happens When You Press Connect?</span></nav>
+        <header class="article-header"><div class="eyebrow">Knowledge Base</div><h1>What Happens When You Press Connect?</h1><p class="lead">When you press Connect in Hiddify, your device creates a secure tunnel to a server from your subscription before your traffic continues to the internet.</p></header>
+
+        <p>This article explains the basic idea in calm, practical terms. No deep protocol details, no complicated networking theory, just what changes after Hiddify connects.</p>
+
+        <h2>The short version</h2>
+        <p>Before you connect, your device talks to websites and services through your regular internet provider. After you connect, your device first talks to a server from your subscription. That server forwards your requests to the internet and sends responses back through the same protected path.</p>
+
+        <div class="connection-flow" aria-label="You to encrypted tunnel to server in Romania to internet">
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
+            <span>You</span>
+          </div>
+          <div class="flow-link"><span>Encrypted tunnel</span></div>
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h2"></path></svg>
+            <span>Server in Romania</span>
+          </div>
+          <div class="flow-link" aria-hidden="true"></div>
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg>
+            <span>Internet</span>
+          </div>
+        </div>
+
+        <h2>How it works step by step</h2>
+        <ol class="steps">
+          <li>You press <strong>Connect</strong> in Hiddify.</li>
+          <li>Hiddify reads the subscription link you imported earlier.</li>
+          <li>It selects an available server from that subscription.</li>
+          <li>Your device creates an encrypted tunnel to that server.</li>
+          <li>Your requests to websites, apps, and online services are sent through the tunnel.</li>
+          <li>The server forwards those requests to the internet.</li>
+          <li>The response comes back to the server.</li>
+          <li>The server sends the response back to your device through the encrypted tunnel.</li>
+        </ol>
+        <p>The important part is that your device still uses your internet connection, but your provider no longer sees each destination in the same direct way.</p>
+
+        <h2>What your provider sees</h2>
+        <div class="comparison two-column">
+          <section class="mini-card">
+            <h3>Without Hiddify connected</h3>
+            <ul>
+              <li>provider may see websites you connect to</li>
+              <li>provider may see destination IP addresses</li>
+              <li>provider may see DNS requests depending on configuration</li>
+              <li>provider sees timing and traffic volume</li>
+            </ul>
+          </section>
+          <section class="mini-card">
+            <h3>With Hiddify connected</h3>
+            <ul>
+              <li>provider sees encrypted connection to the server</li>
+              <li>provider sees server IP address</li>
+              <li>provider sees timing and traffic volume</li>
+              <li>provider does not directly see websites inside the tunnel</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="callout"><strong>Important:</strong> the secure tunnel protects the network path, but it does not make you anonymous on websites where you log in. If you sign in to an account, that website can still recognize you. Cookies, browser profiles, device fingerprints, and account history may also identify you.</div>
+
+        <h2>Why encryption matters</h2>
+        <p>The encrypted tunnel is what makes the connection more private from the network side. Without encryption, traffic can be easier to inspect, classify, or filter. With encryption, the contents of your connection become much harder to read from the outside.</p>
+        <p>Hiddify and VLESS subscriptions are part of a broader shift toward modern internet access tools. They are not only about changing location. They are about creating a more flexible path between your device and the internet.</p>
+
+        <h2>What websites see</h2>
+        <p>After you connect, websites usually do not see your home provider connection directly. They see the request as coming from the server. In SimpleLinkAccess, that server is located in <strong>Romania</strong>.</p>
+        <p>The website responds to the server, and the server sends the response back to your device through the encrypted tunnel.</p>
+
+        <h2>What this does not do</h2>
+        <p>A secure tunnel is powerful, but it is not magic. It does not erase your identity from services where you choose to sign in, and it does not remove tracking that happens inside websites and apps.</p>
+        <p>The right way to think about it is simple: the secure tunnel protects the connection between your device and the server. It gives your provider less visibility into the websites and services you use, but it does not replace careful privacy habits inside browsers, websites, and apps.</p>
+
+        <h2>Summary</h2>
+        <ul>
+          <li>your device creates an encrypted tunnel;</li>
+          <li>the tunnel leads to a server from your subscription;</li>
+          <li>your traffic goes through that server;</li>
+          <li>your provider sees the encrypted connection to the server;</li>
+          <li>websites see requests coming from the server;</li>
+          <li>your browsing path becomes more private from the network side.</li>
+        </ul>
+
+        <a class="card next-card" href="what-is-vless-subscription.html">
+          <span class="card-number">Next</span>
+          <h2>What is a VLESS Subscription?</h2>
+          <p>Learn what the subscription link contains, why Hiddify can import it, and how it connects your app to the server configuration.</p>
+        </a>
+
+        <nav class="pager" aria-label="Article navigation"><a href="index.html">Back to home</a><a href="what-is-vless-subscription.html">Next: What is a VLESS Subscription?</a></nav>
+      </article>
+    </main>
+    <footer class="site-footer"><div class="footer-inner">SimpleLinkAccess documentation.</div></footer>
+  </body>
+</html>

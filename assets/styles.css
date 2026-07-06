@@ -260,6 +260,31 @@ h1 {
   border-bottom: 1px solid var(--line);
 }
 
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.breadcrumbs a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: var(--brand-2);
+}
+
+.breadcrumbs span::before {
+  content: "->";
+  margin-right: 8px;
+  color: var(--brand-2);
+}
+
 .article-header h1 {
   margin: 8px 0 14px;
   color: var(--ink-2);
@@ -353,6 +378,73 @@ h1 {
   color: var(--brand-2);
 }
 
+.connection-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(92px, 0.8fr) minmax(0, 1.2fr) minmax(70px, 0.7fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  margin: 26px 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(3, 16, 31, 0.06);
+}
+
+.flow-node {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  color: var(--ink-2);
+  font-weight: 850;
+  text-align: center;
+}
+
+.flow-node svg {
+  width: 42px;
+  height: 42px;
+  padding: 9px;
+  border-radius: 8px;
+  background: var(--surface-2);
+  fill: none;
+  stroke: var(--brand-2);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.flow-link {
+  position: relative;
+  min-height: 2px;
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+}
+
+.flow-link::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--brand-2);
+  border-right: 2px solid var(--brand-2);
+  transform: translateY(-50%) rotate(45deg);
+  background: var(--surface);
+}
+
+.flow-link span {
+  position: absolute;
+  left: 50%;
+  top: -32px;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 130px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 750;
+  text-align: center;
+}
+
 .steps {
   counter-reset: steps;
   list-style: none;
@@ -392,6 +484,10 @@ h1 {
   margin: 18px 0;
 }
 
+.comparison.two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .mini-card {
   padding: 18px;
   border: 1px solid var(--line);
@@ -401,6 +497,19 @@ h1 {
 
 .mini-card h3 {
   margin-top: 0;
+}
+
+.mini-card ul {
+  margin-bottom: 0;
+}
+
+.next-card {
+  margin-top: 34px;
+}
+
+.next-card .card-number {
+  width: auto;
+  padding: 0 10px;
 }
 
 .pager {
@@ -533,8 +642,37 @@ h1 {
   }
 
   .cards,
-  .comparison {
+  .comparison,
+  .comparison.two-column {
     grid-template-columns: 1fr;
+  }
+
+  .connection-flow {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .flow-link {
+    width: 2px;
+    min-height: 48px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, var(--brand), var(--brand-2));
+  }
+
+  .flow-link::after {
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: -1px;
+    transform: translateX(-50%) rotate(135deg);
+    background: var(--surface);
+  }
+
+  .flow-link span {
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
   }
 
   .pager {
