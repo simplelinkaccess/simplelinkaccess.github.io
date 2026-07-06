@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Who Can See Your Traffic After You Press Connect? | SimpleLinkAccess</title>
+    <meta name="description" content="Learn who can see your traffic after connecting through Hiddify, what your ISP sees, what the server sees, and why understanding trust is an important part of online privacy.">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark">S</span><span>SimpleLinkAccess</span></a><nav class="top-nav" aria-label="Main navigation"><a href="getting-started.html">Getting Started</a><a href="hiddify-essentials-part-1.html">Hiddify</a><a href="buy-vless-subscription.html">Buy VLESS</a><a href="faq.html">FAQ</a><a href="troubleshooting.html">Troubleshooting</a></nav></div></header>
+    <main class="page doc-layout">
+      <aside class="sidebar"><p class="sidebar-title">Knowledge Base</p><a href="what-happens-when-you-press-connect.html">Press Connect</a><a href="who-can-see-your-traffic-after-you-press-connect.html" aria-current="page">Who sees traffic?</a><a href="what-is-vless-subscription.html">What is VLESS?</a><a href="is-hiddify-a-vpn.html">Is Hiddify a VPN?</a><a href="hiddify-vpn-vs-system-proxy.html">Connection modes</a><a href="hiddify-not-connecting.html">Hiddify not connecting</a><a href="hiddify-refresh-subscription.html">Refresh subscription</a><p class="sidebar-title">Guides</p><a href="getting-started.html">Getting Started</a><a href="import-vless-link.html">Import VLESS</a><a href="faq.html">FAQ</a></aside>
+      <article class="article">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>Knowledge</span><span>Who Can See Your Traffic After You Press Connect?</span></nav>
+        <header class="article-header"><div class="eyebrow">Knowledge Base</div><h1>Who Can See Your Traffic After You Press Connect?</h1><p class="lead">Understanding who receives which information is one of the most important steps toward understanding how modern internet connections work.</p></header>
+
+        <h2>Introduction</h2>
+        <p>In the previous article, we learned what happens when you press <strong>Connect</strong> in Hiddify.</p>
+        <p>Your traffic begins travelling through an encrypted tunnel to a server before reaching the internet.</p>
+        <p>A natural question follows:</p>
+        <p><strong>If my internet provider no longer directly sees the websites I visit, who does?</strong></p>
+        <p>Understanding the answer is one of the most important steps toward understanding how modern internet connections work.</p>
+
+        <h2>Traffic path</h2>
+        <p>Every request follows roughly the same path.</p>
+        <div class="connection-flow traffic-path" aria-label="You to encrypted tunnel to server to website">
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"></rect><path d="M10 18h4"></path></svg>
+            <span>You</span>
+          </div>
+          <div class="flow-link" aria-hidden="true"></div>
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="10" width="10" height="10" rx="2"></rect><path d="M9 10V7a3 3 0 0 1 6 0v3"></path></svg>
+            <span>Encrypted tunnel</span>
+          </div>
+          <div class="flow-link" aria-hidden="true"></div>
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="16" rx="2"></rect><path d="M8 9h8M8 13h8M8 17h4"></path></svg>
+            <span>Server</span>
+          </div>
+          <div class="flow-link" aria-hidden="true"></div>
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg>
+            <span>Website</span>
+          </div>
+        </div>
+        <p>Each participant in this path has a different role.</p>
+        <p>Because of that, each one sees different information.</p>
+
+        <h2>What your internet provider sees</h2>
+        <p>Your provider delivers your connection to the server.</p>
+        <p>Typically, it can see:</p>
+        <ul>
+          <li>that your device is connected;</li>
+          <li>the IP address of the server;</li>
+          <li>how much traffic is transferred;</li>
+          <li>connection timing.</li>
+        </ul>
+        <p>Because the tunnel is encrypted, your provider does not directly see the websites and online services inside that tunnel.</p>
+
+        <h2>What the server sees</h2>
+        <p>The server sits between your device and the websites you visit.</p>
+        <p>Its job is simple:</p>
+        <ul>
+          <li>receive encrypted traffic from your device;</li>
+          <li>forward requests to the destination;</li>
+          <li>return responses back through the encrypted tunnel.</li>
+        </ul>
+        <p>Because the server participates in the communication path, choosing a trustworthy provider matters.</p>
+        <p>This is true for any service that operates internet gateways&mdash;not only SimpleLinkAccess.</p>
+
+        <div class="access-table-wrap">
+          <table class="access-table">
+            <caption>Who sees what?</caption>
+            <thead>
+              <tr>
+                <th scope="col">Information</th>
+                <th scope="col">Internet Provider</th>
+                <th scope="col">Server</th>
+                <th scope="col">Website</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Connection exists</td>
+                <td><span class="access-mark access-yes">Yes</span></td>
+                <td><span class="access-mark access-yes">Yes</span></td>
+                <td><span class="access-mark access-partial">Part</span></td>
+              </tr>
+              <tr>
+                <td>Server IP</td>
+                <td><span class="access-mark access-yes">Yes</span></td>
+                <td><span class="access-mark access-yes">Yes</span></td>
+                <td><span class="access-mark access-no">No</span></td>
+              </tr>
+              <tr>
+                <td>Destination websites</td>
+                <td><span class="access-mark access-no">No</span></td>
+                <td><span class="access-mark access-yes">Yes</span></td>
+                <td><span class="access-mark access-yes">Yes</span></td>
+              </tr>
+              <tr>
+                <td>Logged-in identity</td>
+                <td><span class="access-mark access-no">No</span></td>
+                <td><span class="access-mark access-no">No</span></td>
+                <td><span class="access-mark access-yes">Yes</span></td>
+              </tr>
+              <tr>
+                <td>Traffic volume</td>
+                <td><span class="access-mark access-yes">Yes</span></td>
+                <td><span class="access-mark access-yes">Yes</span></td>
+                <td><span class="access-mark access-partial">Part</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Different business models</h2>
+        <p>Not every service exists for the same reason.</p>
+        <p>Some internet services are funded through advertising.</p>
+        <p>Some provide enterprise networking.</p>
+        <p>Some operate large analytics platforms.</p>
+        <p>Others simply sell access to infrastructure.</p>
+        <p>The business model often influences what information a service needs in order to operate.</p>
+        <p>Understanding this helps users make informed choices.</p>
+
+        <h2>How SimpleLinkAccess approaches privacy</h2>
+        <p>SimpleLinkAccess has a straightforward business model.</p>
+        <p>We provide access to our infrastructure through paid subscriptions.</p>
+        <p>We are not an advertising platform.</p>
+        <p>We do not build browsing profiles.</p>
+        <p>We do not inspect which websites our users visit as part of our service.</p>
+        <p>Like any professionally operated internet service, we maintain only the technical information necessary to keep the infrastructure secure, reliable, and available.</p>
+        <p>Our goal is simple:</p>
+        <p>Provide a reliable encrypted tunnel&mdash;not collect information about what users read, watch, or browse.</p>
+
+        <h2>What websites still see</h2>
+        <p>A secure tunnel changes the network path.</p>
+        <p>It does not change how websites identify their own users.</p>
+        <p>If you sign in to an account, that website knows who you are.</p>
+        <p>Cookies, browser fingerprints, account sessions, and other web technologies continue to work exactly as before.</p>
+        <p>This is why a secure connection and online privacy are related&mdash;but not identical&mdash;concepts.</p>
+
+        <h2>Sealed envelope analogy</h2>
+        <p>Imagine sending a sealed envelope.</p>
+        <div class="envelope-flow" aria-label="User to sealed envelope to courier to recipient">
+          <div class="envelope-node">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
+            <span>User</span>
+          </div>
+          <div class="envelope-node">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"></rect><path d="m3 8 9 6 9-6M9 6V4h6v2"></path></svg>
+            <span>Sealed envelope</span>
+          </div>
+          <div class="envelope-node">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11v10H4zM15 10h3l2 3v4h-5zM7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path></svg>
+            <span>Courier</span>
+          </div>
+          <div class="envelope-node">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path><path d="M9 12h6"></path></svg>
+            <span>Recipient</span>
+          </div>
+        </div>
+        <p class="diagram-caption">Each participant only needs part of the information to perform their role.</p>
+        <p>Your internet provider delivers the envelope to the courier.</p>
+        <p>The courier delivers it to the recipient.</p>
+        <p>The recipient opens the envelope because it is addressed to them.</p>
+        <p>Each participant only needs part of the information to perform their role.</p>
+        <p>Modern internet connections work in a similar way.</p>
+
+        <h2>Why this matters</h2>
+        <p>Privacy is not about hiding from everyone.</p>
+        <p>It is about understanding who receives which information&mdash;and why.</p>
+        <p>Modern internet tools help users control their network connection more effectively.</p>
+        <p>But trust still matters.</p>
+        <p>Choosing services with transparent business models and clear privacy principles is an important part of using the internet responsibly.</p>
+
+        <h2>Summary</h2>
+        <p>After you press <strong>Connect</strong>:</p>
+        <ul>
+          <li>your provider sees an encrypted connection to the server;</li>
+          <li>the server forwards your traffic;</li>
+          <li>the website still receives your request;</li>
+          <li>websites where you sign in continue to know who you are;</li>
+          <li>understanding who can see what helps you make informed privacy decisions.</li>
+        </ul>
+
+        <a class="card next-card" href="what-is-vless-subscription.html">
+          <span class="card-number">Next</span>
+          <h2>What Is a VLESS Subscription?</h2>
+          <p>Learn how one subscription link can automatically keep your connection settings up to date.</p>
+        </a>
+
+        <nav class="pager" aria-label="Article navigation"><a href="what-happens-when-you-press-connect.html">Previous: What Happens When You Press Connect?</a><a href="what-is-vless-subscription.html">Next: What Is a VLESS Subscription?</a></nav>
+      </article>
+    </main>
+    <footer class="site-footer"><div class="footer-inner">SimpleLinkAccess documentation.</div></footer>
+  </body>
+</html>
