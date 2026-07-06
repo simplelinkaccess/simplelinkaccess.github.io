@@ -297,6 +297,28 @@ h1 {
   font-size: 20px;
 }
 
+.article-illustration {
+  margin: 26px 0 30px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(3, 16, 31, 0.06);
+}
+
+.article-illustration svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.article-illustration figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 15px;
+  text-align: center;
+}
+
 .article h2 {
   margin: 38px 0 12px;
   color: var(--ink-2);
