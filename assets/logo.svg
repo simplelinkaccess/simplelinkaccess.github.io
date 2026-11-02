@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="blue" x1="24" y1="24" x2="232" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2165f5"/>
+      <stop offset="1" stop-color="#309cf8"/>
+    </linearGradient>
+    <mask id="route" maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="256">
+      <rect width="256" height="256" fill="white"/>
+      <path id="neck" d="M24.98-20C29-15 34-9 43-9H58.82C67.82-9 72.82-15 76.84-20V20C72.82 15 67.82 9 58.82 9H43C34 9 29 15 24.98 20Z" fill="black" transform="translate(128 56) rotate(135)"/>
+      <path d="M24.98-20C29-15 34-9 43-9H58.82C67.82-9 72.82-15 76.84-20V20C72.82 15 67.82 9 58.82 9H43C34 9 29 15 24.98 20Z" fill="black" transform="translate(56 128) rotate(45)"/>
+      <path d="M24.98-20C29-15 34-9 43-9H58.82C67.82-9 72.82-15 76.84-20V20C72.82 15 67.82 9 58.82 9H43C34 9 29 15 24.98 20Z" fill="black" transform="translate(128 200) rotate(-45)"/>
+      <g fill="black"><circle cx="128" cy="56" r="32"/><circle cx="56" cy="128" r="32"/><circle cx="128" cy="200" r="32"/><circle cx="200" cy="128" r="32"/></g>
+    </mask>
+  </defs>
+  <circle cx="128" cy="128" r="120" fill="url(#blue)" mask="url(#route)"/>
+</svg>
